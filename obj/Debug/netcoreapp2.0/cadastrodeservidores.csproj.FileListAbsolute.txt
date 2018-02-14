@@ -1,0 +1,10 @@
+C:\Users\bruno\Desktop\cadastrodeservidores\bin\Debug\netcoreapp2.0\cadastrodeservidores.deps.json
+C:\Users\bruno\Desktop\cadastrodeservidores\bin\Debug\netcoreapp2.0\cadastrodeservidores.runtimeconfig.json
+C:\Users\bruno\Desktop\cadastrodeservidores\bin\Debug\netcoreapp2.0\cadastrodeservidores.runtimeconfig.dev.json
+C:\Users\bruno\Desktop\cadastrodeservidores\bin\Debug\netcoreapp2.0\cadastrodeservidores.dll
+C:\Users\bruno\Desktop\cadastrodeservidores\bin\Debug\netcoreapp2.0\cadastrodeservidores.pdb
+C:\Users\bruno\Desktop\cadastrodeservidores\obj\Debug\netcoreapp2.0\cadastrodeservidores.csproj.CoreCompileInputs.cache
+C:\Users\bruno\Desktop\cadastrodeservidores\obj\Debug\netcoreapp2.0\cadastrodeservidores.AssemblyInfoInputs.cache
+C:\Users\bruno\Desktop\cadastrodeservidores\obj\Debug\netcoreapp2.0\cadastrodeservidores.AssemblyInfo.cs
+C:\Users\bruno\Desktop\cadastrodeservidores\obj\Debug\netcoreapp2.0\cadastrodeservidores.dll
+C:\Users\bruno\Desktop\cadastrodeservidores\obj\Debug\netcoreapp2.0\cadastrodeservidores.pdb

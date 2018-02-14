@@ -1,0 +1,53 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h2>
+    @Model.Mensagem
+</h2>
+<h2>
+    Servidores cadastrados
+</h2>
+<form method="POST">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>RF</th>
+                <th>Unidade de lotação</th>
+                <th>Opções</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var servidor in Model.Servidores)
+            {
+                <tr>
+                    <td>@servidor.Id</td>
+                    <td>@servidor.Nome</td>
+                    <td>@servidor.RF</td>
+                    <td>@servidor.UnidadeLotacao</td>
+                    <td>
+                        <a asp-page="/Detalhes" asp-route-id="@servidor.Id" data-original-title="Detalhes deste servidor" data-toggle="tooltip" type="button" class="btn btn-sm btn-info">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </a>
+                        <a asp-page="/Editar" asp-route-id="@servidor.Id" data-original-title="Editar este servidor" data-toggle="tooltip" type="button" class="btn btn-sm btn-warning">
+                            <i class="glyphicon glyphicon-edit"></i>
+                        </a>
+                        <button asp-page-handler="delete" type="submit" asp-route-id="@servidor.Id" data-original-title="Excluir este cliente" data-toggle="tooltip" class="btn btn-sm btn-danger">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

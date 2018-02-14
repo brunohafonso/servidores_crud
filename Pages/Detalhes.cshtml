@@ -1,0 +1,42 @@
+@page "{Id:int}"
+@model cadastrodeservidores.Pages.DetalhesModel
+@{
+    ViewData["title"] = "Detalhes";
+}
+
+<form method="POST">
+    <h2>
+        @Model.Servidor.Nome
+        <a asp-page="/Editar" asp-route-id="@Model.Servidor.Id" data-original-title="Editar este Servidor" data-toggle="tooltip" type="button" class="pull-right btn btn-sm btn-warning">
+            <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <button asp-page-handler="delete" type="submit" asp-route-id="@Model.Servidor.Id" data-original-title="Excluir este cliente" data-toggle="tooltip" style="margin-right: 2px" class="pull-right btn btn-sm btn-danger">
+            <i class="glyphicon glyphicon-remove"></i>
+        </button>
+    </h2>  
+    <ul class="list-group">
+        <li class="list-group-item">Id: @Model.Servidor.Id</li>
+        <li class="list-group-item">
+            Nome: @Model.Servidor.Nome
+            
+        </li>
+        <li class="list-group-item">Email: @Model.Servidor.Email</li>
+        <li class="list-group-item">Data de Nascimento: @Model.Servidor.DataNascimento</li>
+        <!-- <li class="list-group-item">Tipo: Model.Servidor.Endereco.Tipo</li>
+        <li class="list-group-item">Logradouro: Model.Servidor.Endereco.Logradouro</li>
+        <li class="list-group-item">Número: Model.Servidor.Endereco.Numero</li>
+        <li class="list-group-item">Complemento: Model.Servidor.Endereco.Complemento</li>
+        <li class="list-group-item">CEP: Model.Servidor.Endereco.CEP</li> -->
+        <li class="list-group-item">RF: @Model.Servidor.RF</li>
+        <li class="list-group-item">Vinculo: @Model.Servidor.Vinculo</li>
+        <li class="list-group-item">Cargo: @Model.Servidor.Cargo</li>
+        <li class="list-group-item">Unidade de Lotação: @Model.Servidor.UnidadeLotacao</li>
+        <li class="list-group-item">Unidade de exercicio: @Model.Servidor.UnidadeExercicio</li>
+    </ul>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
