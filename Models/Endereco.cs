@@ -9,10 +9,6 @@ namespace cadastrodeservidores.Models
     {
         [Key]
         public int Id { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string Tipo { get; set; }
         
         [Required]
         [StringLength(50)]

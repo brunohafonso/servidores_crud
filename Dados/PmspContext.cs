@@ -9,5 +9,7 @@ namespace cadastrodeservidores.Dados
         
         public DbSet<Servidor> Servidores { get; set; }
         
+        public DbSet<Endereco> Enderecos { get; set; }
+        
     }
 }

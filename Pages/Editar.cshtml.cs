@@ -19,6 +19,10 @@ namespace cadastrodeservidores.Pages
        
        [BindProperty]
        public Servidor Servidor { get; set; }
+
+       [BindProperty] 
+       public Endereco Endereco { get; set; }
+       
        
        public EditarModel(PmspContext context)
        {
@@ -28,6 +32,8 @@ namespace cadastrodeservidores.Pages
        public async Task<IActionResult> OnGetAsync(int Id)
        {
            Servidor = await _context.Servidores.FindAsync(Id);
+           Endereco = await _context.Enderecos.FindAsync(Id);
+           Servidor.Endereco = Endereco;
            if(Servidor == null) 
            {
                return RedirectToPage("/Index");
